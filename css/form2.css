@@ -1,0 +1,227 @@
+.form2{
+    /* height:297mm; */
+    width:82%;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 80%;
+    display: flex;
+    box-shadow: 3px 3px 3px 3px rgb(172, 172, 172);
+}
+.f2{
+    width: 100%;
+}
+td{
+    max-width: 220px;
+}
+.progress100{
+    width: 200px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress90{
+    width: 180px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress80{
+    width: 160px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress70{
+    width: 140px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress60{
+    width: 120px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress50{
+    width: 100px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress40{
+    width: 80px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress30{
+    width: 60px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress20{
+    width: 40px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progress10{
+    width: 20px;
+    height: 12px;
+    border-radius: 16px;
+    background-color: #693D3D;
+}
+
+.progressbar{
+    width: 200px;
+    height: 12px;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.main-profile{
+    background-color: #8E655F;
+    padding-top: 15px;
+    color: rgb(255, 255, 255);
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+.muc0{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.muc1{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.muc3{
+    padding-top: 5px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.thoigian{
+    width: 140px;
+    text-align: right;
+    border-bottom: 1px solid;
+}
+.thoigian-nam{
+    font-weight: bold;
+    width: 50px;
+    text-align: right;
+}
+
+.profile{
+    width: 35%;
+    float: left;
+    height:100%;
+    background-color: #B48C81;
+}
+
+.content-profile{
+    background-color:#B48C81;
+    float: left;
+    padding: 20px;
+    padding-top: 5px;
+    display: block;
+}
+
+.profile-right{
+    width: 65%;
+    float: right;
+    background-color: #FEDBC5;
+    height:100%;
+}
+
+.content-profile-right{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+
+.avatar2{
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hoten{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2px;
+}
+
+.chucvu{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: initial;
+}
+
+.thongtinthem{
+    margin-bottom: 10px;
+}
+
+.icon{
+    text-align: center;
+}
+
+.bangthongtin{
+    text-align: left;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.demuctrai{
+    background-color: white;
+    color: #693D3D;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    height: 14px;
+    margin-top: 10px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.demucphai{
+    color: white;
+    background-color: #693D3D;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}

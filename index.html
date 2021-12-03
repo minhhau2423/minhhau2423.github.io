@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form1.css">
+    <link rel="stylesheet" href="css/form2.css">
+    <link rel="stylesheet" href="css/style_form3.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class='select-language'>
+                <img id="flag" class="img-lg" src="images/flagVn.png" alt="">
+                <select name="Language" id="language">
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="English">English</option>
+                </select>
+
+            </div>
+
+            <div style="width:100%; padding-top:50px; padding-bottom: 10px;">
+                <div style="width:100%; padding-bottom: 20px;">
+                    <label id='choose-form-text'>CHỌN MẪU CV</label>
+                </div>
+                <div class="choose-form">
+                    <div class="form-cv"  onclick="chooseForm1()">
+                        <img class="avt-form" src="images/f1.png">
+                    </div>
+                    <div class="form-cv"  onclick="chooseForm2()">
+                        <img class="avt-form" src="images/f2.png">
+                    </div>
+                    <div class="form-cv"  onclick="chooseForm3()">
+                        <img class="avt-form" src="images/f3.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+
+            <div class="info-title">
+                <h1 id='info-title-text'> THÔNG TIN CÁ NHÂN</h1>
+            </div>
+
+            <div class="info-group">
+                <input type="file" id="upload" accept="image/png, image/gif, image/jpeg" onchange="readURL(this)"
+                    hidden />
+                <label id='lb-upload' for="upload">Chọn ảnh</label>
+                <label id='or-text'>HOẶC</label>
+                <input id="path-text" class="input" type="text" placeholder=" Nhập đường dẫn ảnh">
+            </div>
+            <div class="group">
+                <p id="name-text">HỌ TÊN</p>
+                <input id="name-input" class="input" type="text">
+            </div>
+            <div class="group">
+                <p id="sub-text">TIÊU ĐỀ PHỤ</p>
+                <input id="sub-input" class="input" type="text">
+            </div>
+            <div class="group">
+                <p id="date-text">NGÀY SINH</p>
+                <input id="birthday-input" class="input" type="date">
+            </div>
+            <div class="group">
+                <p id="gender-text">GIỚI TÍNH</p>
+                <input class="inputr" type="radio" value="Nam" name="goitinh" onchange="getValue(this)"> <label
+                    id="nam-text">Nam</label>
+                <input class="inputr" type="radio" value="Nu" name="goitinh" onchange="getValue(this)"> <label
+                    id="nu-text">Nữ</label>
+
+            </div>
+            <div class="group">
+                <p id="phone-text">SĐT</p>
+                <input id="phone-input" class="input" type="text">
+            </div>
+            <div class="group">
+                <p id="address-text">ĐỊA CHỈ</p>
+                <input id="address-input" class="input" type="text">
+            </div>
+            <div class="group">
+                <p id="mail-text">MAIL</p>
+                <input id="mail-input" class="input" type="text">
+            </div>
+
+
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+
+            <div style="width: 95%; font-size: 15px;">
+                <label id='mxh-text' style="cursor: pointer;">MẠNG XÃ HỘI</label>
+                <div id="btn-add-mxh" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="mxh">
+                    <!--cAC LINK MXH -->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='muctieu-text' style="cursor: pointer;">MỤC TIÊU NGHỀ NGHIỆP</label>
+                <div id="btn-add-muctieu" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="muctieu">
+                    <!--cAC MUC TIEU -->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='hocvan-text' style="cursor: pointer;">HỌC VẤN</label>
+                <div id="btn-add-hocvan" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="hocvan">
+                    <!--cAC THONG TIN HOC VAN -->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='kn-text' style="cursor: pointer;">KINH NGHIỆM</label>
+                <div id="btn-add-kn" class="btn-add">
+                    <i class="fas fa-plus-circle icon-add"></i>
+                </div>
+                <ul id="kn">
+                    <!--cAC KN -->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='duAn-text' style="cursor: pointer;">DỰ ÁN</label>
+                <div id="btn-add-duAn" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="duAn">
+                    <!--DU AN-->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+
+            <div style="width: 95%; font-size: 15px;">
+                <label id='comp-text'>TIN HỌC</label>
+                <ul>
+                    <li>
+                        <div>
+                            <input id="comp-core" class='eng' style="width:50px" type="number" min="0" max="10">/10
+                        </div>
+                    </li>
+                </ul>
+                <label id='eng-text'>TIẾNG ANH</label>
+                <ul>
+                    <li>
+                        <div id="nghe-text">Nghe</div>
+                        <div>
+                            <input id="nghe-core" class='eng' style="width:50px" type="number" min="0" max="10">/10
+                        </div>
+                    </li>
+                    <li>
+                        <div id="noi-text">Nói</div>
+                        <div>
+                            <input id="noi-core" class='eng' style="width:50px" type="number" min="0" max="10">/10
+                        </div>
+                    </li>
+                    <li>
+                        <div id="doc-text">Đọc</div>
+                        <div>
+                            <input id="doc-core" class='eng' style="width:50px" type="number" min="0" max="10">/10
+                        </div>
+                    </li>
+                    <li>
+                        <div id="viet-text">Viết</div>
+                        <div>
+                            <input id="viet-core" class='eng' style="width:50px" type="number" min="0" max="10">/10
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='kynang-text' style="cursor: pointer;">CÁC KỸ NĂNG KHÁC</label>
+                <div id="btn-add-kynang" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="kynang">
+                    <!--cAC KY NANG -->
+                </ul>
+            </div>
+
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='hd-text' style="cursor: pointer;">HOẠT ĐỘNG</label>
+                <div id="btn-add-hd" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="hd">
+                    <!--HOAT DONG-->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='cc-text' style="cursor: pointer;">CHỨNG CHỈ</label>
+                <div id="btn-add-cc" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="cc">
+                    <!--CHUNG CHI-->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='giaithuong-text' style="cursor: pointer;">GIẢI THƯỞNG</label>
+                <div id="btn-add-giaithuong" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="giaithuong">
+                    <!--GIAI THUONG-->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='sothich-text' style="cursor: pointer;">SỞ THÍCH</label>
+                <div id="btn-add-sothich" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="sothich">
+                    <!--SO thich-->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='thongtinthem-text' style="cursor: pointer;">THÔNG TIN THÊM</label>
+                <div id="btn-add-thongtinthem" class="btn-add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <ul id="thongtinthem">
+                    <!--THONG TIN THEM-->
+                </ul>
+            </div>
+            <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
+            <div style="width: 95%; font-size: 15px;">
+                <label id='ntc-text' style="cursor: pointer;">NGƯỜI THAM CHIẾU</label>
+                <ul>
+                    <li>
+                        <i style="width:20px;" class="far fa-user"></i>
+                        <input id="tennguoithamchieu" type="text" class="mini-input" placeholder="Name">
+                    </li>
+                    <li>
+                        <i style="width:20px;" class="fas fa-map-pin"></i>
+                        <input id='vitringuoithamchieu' type="text" class="mini-input" placeholder="Position">
+                    </li>
+                    <li>
+                        <i style="width:20px;" class="fas fa-phone"></i>
+                        <input id="sdtnguoithamchieu" type="text" class="mini-input" placeholder="Phone">
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <div class="right">
+            <!-- Download -->
+            <div class="download" id="download">
+                <div style=" width:20%; height:100%;background-color: black; border-radius: 0  50px  50px 0;">
+                    <i id="download-show" class="fas fa-angle-right" style="cursor: pointer;"></i>
+                </div>
+                <div id="download-btn" onclick="download()">
+                    <i class="fas fa-download"></i>
+                    <span id="download-text">Download</span>
+                </div>
+            </div>
+
+            <div class="cv-content" id="content" style="margin-bottom: 20px;">
+
+                <!-- MẪU 1 -->
+                <div class="form1" id="form1" style="">
+                    <div class="f1-l">
+                        <div class="div-avt">
+                            <img src="images/avt.png" alt="avatar" class="avatar" id="avatar">
+                        </div>
+                        <!-- thông tin liên hệ -->
+                        <div class="div-l" id="ttlh" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-info-circle hd-icon"></i>
+                                <span id="ttlh-text">THÔNG TIN LIÊN HỆ</span>
+                            </div>
+                            <div class="div-l-child">
+                                <i class="fas fa-calendar-check info-icon"></i>
+                                <span id="birthday"></span>
+                            </div>
+                            <div class="div-l-child">
+                                <i class="fas fa-venus-mars info-icon"></i>
+                                <span id="gender"></span>
+                            </div>
+                            <div class="div-l-child">
+                                <i class="fas fa-phone info-icon"></i>
+                                <span id="phone"></span>
+                            </div>
+                            <div class="div-l-child">
+                                <i class="fas fa-envelope info-icon"></i>
+                                <span id="mail"></span>
+                            </div>
+                            <div class="div-l-child">
+                                <i class="fas fa-map-marker-alt info-icon"></i>
+                                <span id="address"></span>
+                            </div>
+                        </div>
+                        <!-- mục tiêu nghề nghiệp -->
+                        <div class="div-l" id="mtnn" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-flag-checkered hd-icon"></i>
+                                <span id="mtnn-text"> MỤC TIÊU NGHỀ NGHIỆP</span>
+                            </div>
+                        </div>
+                         <!-- Tiếng anh -->
+                         <div class="div-l" id="mtnn" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-book-reader hd-icon"></i>
+                                <span id='tin-text2'>TIN HỌC</span>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="tin-text" style="width:10%">Thành thạo</span>
+                                <div class="myProgress">
+                                    <div class="myBar" id="htin-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tiếng anh -->
+                        <div class="div-l" id="mtnn" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-book-reader hd-icon"></i>
+                                <span id='eng-text2'>TIẾNG ANH</span>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="nghe-text2" style="width:10%">Nghe</span>
+                                <div class="myProgress">
+                                    <div class="myBar" id="nghe-bar"></div>
+                                </div>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="noi-text2" style="width:10%">Nói</span>
+                                <div class="myProgress">
+                                    <div class="myBar" id="noi-bar"></div>
+                                </div>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="doc-text2" style="width:10%">Đọc</span>
+                                <div class="myProgress">
+                                    <div class="myBar" id="doc-bar"></div>
+                                </div>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="viet-text2" style="width:10%">Viết</span>
+                                <div class="myProgress">
+                                    <div class="myBar" id="viet-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- kỹ năng khác -->
+                        <div class="div-l" id="cknk" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-boxes hd-icon"></i>
+                                <span id="cknk-text"> CÁC KỸ NĂNG KHÁC</span>
+                            </div>
+                        </div>
+                        <!-- Giải thưởng -->
+                        <div class="div-l" id="gt" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-award hd-icon"></i>
+                                <span id="gt-text"> GIẢI THƯỞNG</span>
+                            </div>
+
+                        </div>
+                        <!-- chứng chỉ -->
+                        <div class="div-l" id="chungchi" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-stamp hd-icon"></i>
+                                <span id="chungchi-text"> CHỨNG CHỈ</span>
+                            </div>
+                        </div>
+                        <!-- sở thích -->
+                        <div class="div-l" id="st" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-thumbs-up hd-icon"></i>
+                                <span id="st-text"> SỞ THÍCH</span>
+                            </div>
+                        </div>
+                        <!-- người tham chiếu -->
+                        <div class="div-l" id="nguoithamchieu" ondblclick="removeOutCV(this)">
+                            <div class="div-l-header">
+                                <i class="fas fa-user-circle hd-icon"></i>
+                                <span id="nguoithamchieu-text"> NGƯỜI THAM CHIẾU</span>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="tenntc"></span>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="vitrintc"></span>
+                            </div>
+                            <div class="div-l-child">
+                                <span id="sdtntc"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="f1-r">
+                        <div class="info">
+                            <div class="div-name">
+                                <label id="name" class="name"> NGUYỄN VĂN A</label><br><br>
+                                <label id="sub" class="sub"> lập trình viên</label>
+                            </div>
+                        </div>
+                        <!-- trình độ học vấn -->
+                        <div class="div-r" id="trinhdo" ondblclick="removeOutCV(this)">
+                            <div class="div-r-header">
+                                <span id="td-text">TRÌNH ĐỘ HỌC VẤN</span>
+                            </div>
+                        </div>
+                        <!-- kinh nghiêm làm viec -->
+                        <div class="div-r" id="kinhnghiemlamviec" ondblclick="removeOutCV(this)">
+                            <div class="div-r-header">
+                                <span id="knlv-text">KINH NGHIỆM LÀM VIỆC</span>
+                            </div>
+                        </div>
+                        <!-- hoạt động -->
+                        <div class="div-r" id="hoatdong" ondblclick="removeOutCV(this)">
+                            <div class="div-r-header">
+                                <span id="hoatdong-text">HOẠT ĐỘNG</span>
+                            </div>
+                        </div>
+                        <!-- dự án -->
+                        <div class="div-r" id="duan" ondblclick="removeOutCV(this)">
+                            <div class="div-r-header">
+                                <span id="duan-text">DỰ ÁN THAM GIA</span>
+                            </div>
+                        </div>
+                        <!-- thông tin thêm -->
+                        <div class="div-r" id="ttt" ondblclick="removeOutCV(this)">
+                            <div class="div-r-header">
+                                <span id="ttt-text">THÔNG TIN THÊM</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="footer"></div>
+
+                </div>
+                <!-- END MẪU 1 -->
+
+
+                <!-- MẪU 2 -->
+                <div style="height: 20px;" style="display: none;"></div>
+                <div class="form2" id="form2" style="display: none;">
+                    <div class="f2">
+
+                 
+                    <div class="profile">
+                        <div class="main-profile">
+                            <div id="pname" class="hoten">Nguyễn Văn A</div>
+                            <div id="psub" class="chucvu">Lập trình viên</div>
+                            <div class="avatar2">
+                                <img id="pavatar" class="avatar2"
+                                    src="images/avt.png" alt="asdfasf">
+                            </div>
+
+                            <table class="bangthongtin" id="pbthongtin">
+                                <tr>
+                                    <td><i class="fas fa-calendar-week icon"></i></td>
+                                    <td><span id="pbirthday"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-venus-mars icon"></i></td>
+                                    <td><span id="pgender"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-phone-alt icon"></i></td>
+                                    <td><span id="pphone"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-envelope icon"></i></td>
+                                    <td><span id="pmail"></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-map-marker-alt icon"></i></td>
+                                    <td><span id="paddress"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-link icon"></i></td>
+                                    <td><span>Links:</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="content-profile">
+                            <div ondblclick="removeOutCV(this)">
+                                <div class="demuctrai" id="pmmuctieunghenghiep">MỤC TIÊU NGHỀ NGHIỆP</div>
+                                <div id="pmtnn">
+                                </div>
+                            </div>
+
+                            <div class="demuctrai" id="pmkynang" ondblclick="removeOutCV(this)">KỸ NĂNG</div>
+                            <div ondblclick="removeOutCV(this)">
+                                <div class="muc1" id="pmtinhoc">Tin học văn phòng</div>
+                                <div class="progressbar">
+                                    <div class="progress0" id="pcomp-bar"></div>
+                                </div>
+                            </div>
+
+                            <div ondblclick="removeOutCV(this)">
+                                <div class="muc1" id="pmtienganh" ondblclick="removeOutCV(this)">Tiếng Anh</div>
+
+                                <div>
+                                    <div class="muc3" id="pmtanghe">Nghe</div>
+                                    <div class="progressbar">
+                                        <div class="progress0" id="pnghe-bar"></div>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <div class="muc3" id="pmtanoi">Nói</div>
+                                    <div class="progressbar">
+                                        <div class="progress0" id="pnoi-bar"></div>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <div class="muc3" id="pmtadoc">Đọc</div>
+                                    <div class="progressbar">
+                                        <div class="progress0" id="pdoc-bar"></div>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <div class="muc3" id="pmtaviet">Viết</div>
+                                    <div class="progressbar">
+                                        <div class="progress0" id="pviet-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div ondblclick="removeOutCV(this)">
+                                <div class="demuctrai" id="pmkynangkhac">KỸ NĂNG KHÁC</div>
+                                <div id="pkynangkhac">
+                                </div>
+                            </div>
+
+                            <div ondblclick="removeOutCV(this)">
+                                <div class="demuctrai" id="pmsothich">SỞ THÍCH</div>
+                                <div id="psothich">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-right">
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmhocvan" style="margin-top: 10px;">HỌC VẤN</div>
+                            <div id="phocvan">
+                            </div>
+                        </div>
+
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmkinhnghiem">KINH NGHIỆM LÀM VIỆC</div>
+                            <div id="pkinhnghiem">
+                            </div>
+                        </div>
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmhoatdong">HOẠT ĐỘNG</div>
+                            <div id="phoatdong">
+                            </div>
+                        </div>
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmduan">DỰ ÁN</div>
+                            <div id="pduan">
+                            </div>
+                        </div>
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmchungchi">CHỨNG CHỈ</div>
+                            <div id="pchungchi">
+                            </div>
+                        </div>
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmgiaithuong">GIẢI THƯỞNG</div>
+                            <div id="pgiaithuong">
+                            </div>
+                        </div>
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmthongtinthem">THÔNG TIN THÊM</div>
+                            <div id="pthongtinthem">
+                            </div>
+                        </div>
+                        <div ondblclick="removeOutCV(this)">
+                            <div class="demucphai" id="pmnguoithamchieu">NGƯỜI THAM CHIẾU</div>
+                            <table class="content-profile-right">
+                                <tr>
+                                    <td class="muc1" id="ptenntc">
+              
+                                    </td>
+                                    <td class="thoigian-nam" id="psdtntc">
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="ctyntc">
+        
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td id="pvitrintc">
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>  
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="form3" id="form3" style="display: none;">
+                    <div class="form-cv3">
+                        <div class="left-cv">
+                            <div class="avt-cv">
+                                <img src="images/avt.png" alt="Avatar" class="avt" id="gavatar">
+                                <p id="ggender"></p>
+                                <p id="gbirthday"></p>
+                            </div>
+                            <div class="contact head-tit">
+                                <b class="left-tittle" id="gmcontact">contact me</b>
+                                <ul class="contact-inf">
+                                    <li><i class="fas fa-map-marker-alt icon3"></i><span id="gaddress"></span></li>
+                                    <li><i class="fas fa-phone icon3"></i><span id="gphone"></span></li>
+                                    <li><i class="fas fa-envelope icon3"></i><span id="gmail"></span></li>
+                                    <li>
+                                        <i class="fas fa-globe-asia icon3"></i>
+                                        <div class="social-network">
+                                            <ul class="social" id="gsocial">
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            <div class="career-goal head-tit">
+                                <b class="left-tittle" id="gmmuctieunghenghiep">career goal</b>
+                                <p class="career-goal-content" id="gmtnn"></p>
+                            </div>
+                            <div class="skill-oit head-tit">
+                                <b class="left-tittle" id="gmtinhoc">IT Skills</b>
+                                <input class="rank" id="gitskill" type="range" min="0" max="10" step="1">
+                            </div>
+                            <div class="skill-eng head-tit">
+                                <b class="left-tittle" id="gmtienganh">English</b>
+                                <p class="speaking" id="gmtanoi">Speaking 
+                                </p>
+                                <input class="rank" id="gspeaking" type="range" min="0" max="10" step="1">
+                                <p class="listening" id="gmtanghe">Listening
+                                </p>
+                                <input class="rank" id="glistening" type="range" min="0" max="10" step="1">
+                                <p class="reading" id="gmtadoc">Reading
+                                </p>
+                                <input class="rank" id="greading" type="range" min="0" max="10" step="1">
+                                <p class="writing" id="gmtaviet">Writing
+                                </p>
+                                <input class="rank" id="gwritting" type="range" min="0" max="10" step="1">
+                            </div>
+                            <div class="orther-skills head-tit skill3">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="left-tittle" id="gmkynangkhac">Skills</b>
+                                    <ul class="skill3">
+                                        
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                            <div class="hobby head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="left-tittle" id="gmsothich">Hobbies</b>
+                                    <ul class="hob" id="ghob">
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="more head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="left-tittle" id="gmthongtinthem">more</b>
+                                    <p class="descr" id="gmore"></p>
+
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="right-cv">
+                            <div class="pro-name">
+                                <p class="name" id="gname">Nguyễn văn a</p>
+                                <p class="sub" id="gsub">Designer</p>     
+                            </div>
+                            <!--Học vấn-->
+                            <div class="education head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="right-tittle" id="gmhocvan">Education</b>
+                                    <div id="gedu">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Kinh nghiệm làm việc-->
+                            <div class="experiences head-tit">
+                                <div ondblclick="removeOutCV(this)">
+
+                                    <b class="right-tittle" id="gmkinhnghiem">experiences</b>
+                                    <div id="gexp">
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--Hoạt động-->
+                            <div class="activities head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="right-tittle" id="gmhoatdong">activities</b>
+                                    <div id="gact">
+                                        
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            <!--Chứng chỉ-->
+                            <div class="certificate head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="right-tittle" id="gmchungchi">certificate</b>
+                                    <div id="gcer">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Giải thưởng-->
+                            <div class="awards head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="right-tittle" id="gmgiaithuong">awards</b>
+                                    <div id="gawa">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Dự án-->
+                            <div class="projects head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="right-tittle" id="gmduan">projects</b>
+                                    <div id="gprj">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--Tham chiếu-->
+                            <div class="references head-tit">
+                                <div ondblclick="removeOutCV(this)">
+                                    <b class="right-tittle" id="gmnguoithamchieu">references</b>
+                                    <div class="wrap">
+                                        <div class="time-cv">
+                                            <p id="gcontact-ref"></p> <!--Thông tin liên hệ-->
+                                        </div>
+                                        <div class="content">
+                                            <h3 class="location-name" id="gname-ref"></h3> <!--Tên người tham chiếu-->
+                                            <h4 class="position-name" id="gpos-ref"></h4> <!--Chức vụ-->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="color-main">
+                    <div id="change-color-f1">
+                        <div onclick="setColor(this)" class="color" style="background-color: #B82731"></div>
+                        <div onclick="setColor(this)" class="color" style="background-color: #F1A600;"></div>
+                        <div onclick="setColor(this)" class="color" style="background-color: #008744;"></div>
+                        <div onclick="setColor(this)" class="color" style="background-color: #113743;"></div>
+                    </div>
+                   
+                    <div class="mess">
+                        Nhấn đúp vào một mục không cần thiết để xóa khỏi CV
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+</body>
+
+</html>

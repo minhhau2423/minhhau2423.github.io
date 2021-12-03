@@ -1,0 +1,133 @@
+.form-cv3{
+    width: 80%;
+    min-width: 700px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: rgb(81, 81, 81);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 3px 3px rgb(172, 172, 172);
+}
+
+li{
+    list-style-type: none;
+}
+.clear{
+    clear: both;
+}
+
+.icon3{
+    margin-right: 10px;
+}
+
+.head-tit{
+    padding: 10px;
+    font-size: 14px;
+    text-align: justify;
+}
+.contact-inf{
+    padding: 20px 20px 20px 5px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.left-tittle, .right-tittle{
+    text-transform: uppercase;
+    color: #f78a3e;
+    border-bottom: 2px solid #f78a3e;
+    display: inline-block;
+    width: 100%;
+    
+    margin-bottom: 5px;
+    font-size: 15px !important;
+}
+/*Left of CV*/
+.left-cv{
+    float: left;
+    width: 35%;
+    background-color: rgb(247, 219, 198);
+}
+.left-tittle{
+    text-align: right !important;
+}
+.right-tittle{
+    text-align: left !important;
+}
+.avt-cv{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(15, 15, 15, 0.938);  
+}
+.avt-cv .avt{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;  
+    margin: 15px 0px;
+    border: 5px solid #f78a3e;
+    object-fit: cover;
+}
+
+.social >li{
+    list-style-type: square;
+    margin-left: 5px;
+}
+.hob>li, .skill3{
+    list-style-type: square;
+    margin-left: 10%;
+}
+
+.rank {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+  /*Thiết kế phần để kéo trượt trong rangerslider -- dùng -webkit- để chạy trên Chrome, Opera, Safari, Edge*/
+.rank::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #f78a3e;
+}
+
+/*Right of CV*/
+.right-cv{
+    float: right;
+    width: 65%;
+}
+.pro-name{
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 50px;
+    text-shadow: 2px 1px 1px #f78a3e;
+    
+}
+.pro-name >.name{
+    padding: 30px 0px 5px 0px;
+    font-size: 38px;
+    color: rgb(81, 81, 81) !important;
+}
+.pro-name .sub{
+    font-size: 20px;
+    color: rgb(81, 81, 81) !important;
+}
+.time-cv{
+    float: right;
+}
+.wrap{
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    border-bottom: 0.5px solid rgba(81, 81, 81, 0.11);
+}
+
