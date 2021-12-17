@@ -452,9 +452,15 @@ document.getElementById("btn-add-kynang").addEventListener('click', () => {
     let li2 = document.createElement('li');
     pkynangkhac.appendChild(li2);
     //999
+
+    let gkynangkhac = document.getElementById('skill3');
+    let li3 = document.createElement('li');
+    gkynangkhac.appendChild(li3);
+
     input.addEventListener("keyup", (e) => {
         span.innerHTML = e.target.value;
         li2.innerHTML = e.target.value;
+        li3.innerHTML = e.target.value;
     })
     del.addEventListener("click", () => {
         document.getElementById("cknk").removeChild(div);
@@ -1717,10 +1723,14 @@ function download() {
     const e = document.getElementById("form1");
     const e2 = document.getElementById("form2");
     const e3 = document.getElementById("form-cv3");
-
+    var opt = {
+        filename:     'myfile.pdf',
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
     html2pdf()
         .from(formDownload)
-        .set({ filename: "CV.pdf" })
+        .set(opt)
         .save();
 }
 

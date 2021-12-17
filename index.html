@@ -294,7 +294,7 @@
             </div>
 
             <div class="cv-content" id="content" style="margin-bottom: 20px;">
-
+                <div style="height: 20px;" style="display: none;"></div>
                 <!-- MẪU 1 -->
                 <div class="form1" id="form1" style="">
                     <div class="f1-l">
@@ -473,7 +473,7 @@
 
 
                 <!-- MẪU 2 -->
-                <div style="height: 20px;" style="display: none;"></div>
+             <!--    <div style="height: 20px;" style="display: none;"></div> -->
                 <div class="form2" id="form2" style="display: none;">
                     <div class="f2">
 
@@ -641,8 +641,6 @@
                     </div>
                 </div>
                 </div>
-
-
                 <div class="form3" id="form3" style="display: none;">
                     <div class="form-cv3">
                         <div class="left-cv">
@@ -669,7 +667,7 @@
                             </div>
                             <div class="career-goal head-tit">
                                 <b class="left-tittle" id="gmmuctieunghenghiep">career goal</b>
-                                <p class="career-goal-content" id="gmtnn"></p>
+                                <div class="career-goal-content" id="gmtnn"></div>
                             </div>
                             <div class="skill-oit head-tit">
                                 <b class="left-tittle" id="gmtinhoc">IT Skills</b>
@@ -677,23 +675,24 @@
                             </div>
                             <div class="skill-eng head-tit">
                                 <b class="left-tittle" id="gmtienganh">English</b>
-                                <p class="speaking" id="gmtanoi">Speaking 
-                                </p>
+                               
+                                <span class="speaking" id="gmtanoi">Speaking
+                                </span>
                                 <input class="rank" id="gspeaking" type="range" min="0" max="10" step="1">
-                                <p class="listening" id="gmtanghe">Listening
-                                </p>
+                                <span class="listening" id="gmtanghe">Listening
+                                </span>
                                 <input class="rank" id="glistening" type="range" min="0" max="10" step="1">
-                                <p class="reading" id="gmtadoc">Reading
-                                </p>
+                                <span class="reading" id="gmtadoc">Reading
+                                </span>
                                 <input class="rank" id="greading" type="range" min="0" max="10" step="1">
-                                <p class="writing" id="gmtaviet">Writing
-                                </p>
+                                <span class="writing" id="gmtaviet">Writing
+                                </span>
                                 <input class="rank" id="gwritting" type="range" min="0" max="10" step="1">
                             </div>
                             <div class="orther-skills head-tit skill3">
                                 <div ondblclick="removeOutCV(this)">
                                     <b class="left-tittle" id="gmkynangkhac">Skills</b>
-                                    <ul class="skill3">
+                                    <ul class="skill3" id="skill3">
                                         
                                     </ul>
                                 
@@ -718,8 +717,8 @@
                         </div>
                         <div class="right-cv">
                             <div class="pro-name">
-                                <p class="name" id="gname">Nguyễn văn a</p>
-                                <p class="sub" id="gsub">Designer</p>     
+                                <div class="name" id="gname">Nguyễn văn a</div>
+                                <span class="sub" id="gsub">Designer</span>     
                             </div>
                             <!--Học vấn-->
                             <div class="education head-tit">
