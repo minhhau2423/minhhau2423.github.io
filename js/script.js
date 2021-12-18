@@ -32,6 +32,249 @@ document.getElementById("download").addEventListener("mouseout", () => {
     document.getElementById("download-show").classList.remove("fa-angle-left");
 })
 
+//ctp start
+// huong dan:
+// dat 1 div vd: <div id="spacemtnn"><div> ben duoi noi dung cac de muc.
+document.getElementById("btn-addspace-mtnn").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacemtnn");
+    let  divh  = document.getElementById("spacemtnn1");
+    let  divg  = document.getElementById("spacemtnn2");
+    
+
+    //sp dung chung duoc
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+    
+
+   
+    //divg.appendChild(sp);
+});
+
+document.getElementById("btn-addspace-hocvan").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacehocvan");
+    let divh = document.getElementById("spacehocvan1");
+    let divg = document.getElementById("spacehocvan2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-kinhnghiem").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacekinhnghiem");
+    let divh = document.getElementById("spacekinhnghiem1");
+    let divg = document.getElementById("spacekinhnghiem2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-duan").addEventListener('click', ()=>{
+    let divp = document.getElementById("spaceduan");
+    let divh = document.getElementById("spaceduan1");
+    let divg = document.getElementById("spaceduan2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-tinhoc").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacetinhoc");
+    let divh = document.getElementById("spacetinhoc1");
+    let divg = document.getElementById("spacetinhoc2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-tienganh").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacetienganh");
+    let divh = document.getElementById("spacetienganh1");
+    let divg = document.getElementById("spacetienganh2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-hoatdong").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacehoatdong");
+    let divh = document.getElementById("spacehoatdong1");
+    let divg = document.getElementById("spacehoatdong2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp2.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-chungchi").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacechungchi");
+    let divh = document.getElementById("spacechungchi1");
+    let divg = document.getElementById("spacechungchi2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-giaithuong").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacegiaithuong");
+    let divh = document.getElementById("spacegiaithuong1");
+    let divg = document.getElementById("spacegiaithuong2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-sothich").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacesothich");
+    let divh = document.getElementById("spacesothich1");
+    let divg = document.getElementById("spacesothich2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-thongtinthem").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacethongtinthem");
+    let divh = document.getElementById("spacethongtinthem1");
+    let divg = document.getElementById("spacethongtinthem2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
+document.getElementById("btn-addspace-kynangkhac").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacekynangkhac");
+    let divh = document.getElementById("spacekynangkhac1");
+    let divg = document.getElementById("spacekynangkhac2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+document.getElementById("btn-addspace-nguoithamchieu").addEventListener('click', ()=>{
+    let divp = document.getElementById("spacenguoithamchieu");
+    let divh = document.getElementById("spacenguoithamchieu1");
+    let divg = document.getElementById("spacenguoithamchieu2");
+    let sp = document.createElement('div');
+    sp.style.height="20px";
+    sp.setAttribute('onClick', "removeOutCV(this);");
+    divp.appendChild(sp);
+    let sp1= document.createElement('div');
+    sp1.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divh.appendChild(sp1);
+    let sp2= document.createElement('div');
+    sp2.style.height="20px";
+    sp1.setAttribute('onClick', "removeOutCV(this);");
+    divg.appendChild(sp2);
+});
+
 
 /* add MXH */ //phong
 document.getElementById("btn-add-mxh").addEventListener('click', () => {

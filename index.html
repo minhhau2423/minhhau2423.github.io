@@ -98,7 +98,7 @@
             <!--line -->
 
             <div style="width: 95%; font-size: 15px;">
-                <label id='mxh-text' style="cursor: pointer;">MẠNG XÃ HỘI</label>
+                <label class="effect-box" id='mxh-text' style="cursor: pointer;">MẠNG XÃ HỘI</label>
                 <div id="btn-add-mxh" class="btn-add">
                     <i class="fas fa-plus-circle"></i>
                 </div>
@@ -113,10 +113,13 @@
                 <div id="btn-add-muctieu" class="btn-add">
                     <i class="fas fa-plus-circle"></i>
                 </div>
+
                 <ul id="muctieu">
                     <!--cAC MUC TIEU -->
                 </ul>
             </div>
+            <button id="btn-addspace-mtnn">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -128,6 +131,8 @@
                     <!--cAC THONG TIN HOC VAN -->
                 </ul>
             </div>
+            <button id="btn-addspace-hocvan">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -139,6 +144,8 @@
                     <!--cAC KN -->
                 </ul>
             </div>
+            <button id="btn-addspace-kinhnghiem">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -150,6 +157,8 @@
                     <!--DU AN-->
                 </ul>
             </div>
+            <button id="btn-addspace-duan">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
 
@@ -162,6 +171,9 @@
                         </div>
                     </li>
                 </ul>
+                <button id="btn-addspace-tinhoc">Add space</button>
+                <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
+            <!--line -->
                 <label id='eng-text'>TIẾNG ANH</label>
                 <ul>
                     <li>
@@ -189,6 +201,7 @@
                         </div>
                     </li>
                 </ul>
+                <button id="btn-addspace-tienganh">Add space</button>
             </div>
 
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
@@ -202,6 +215,7 @@
                     <!--cAC KY NANG -->
                 </ul>
             </div>
+            <button id="btn-addspace-kynangkhac">Add space</button>
 
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
@@ -214,6 +228,8 @@
                     <!--HOAT DONG-->
                 </ul>
             </div>
+            <button id="btn-addspace-hoatdong">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -225,6 +241,8 @@
                     <!--CHUNG CHI-->
                 </ul>
             </div>
+            <button id="btn-addspace-chungchi">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -236,6 +254,8 @@
                     <!--GIAI THUONG-->
                 </ul>
             </div>
+            <button id="btn-addspace-giaithuong">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -247,6 +267,8 @@
                     <!--SO thich-->
                 </ul>
             </div>
+            <button id="btn-addspace-sothich">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -258,6 +280,8 @@
                     <!--THONG TIN THEM-->
                 </ul>
             </div>
+            <button id="btn-addspace-thongtinthem">Add space</button>
+
             <div style="margin: 10px; width: 92%; height: 2px; background-color: gray;"></div>
             <!--line -->
             <div style="width: 95%; font-size: 15px;">
@@ -278,8 +302,8 @@
                 </ul>
 
             </div>
+            <button id="btn-addspace-nguoithamchieu">Add space</button>
         </div>
-
 
         <div class="right">
             <!-- Download -->
@@ -292,11 +316,11 @@
                     <span id="download-text">Download</span>
                 </div>
             </div>
-
+            
             <div class="cv-content" id="content" style="margin-bottom: 20px;">
                 <div style="height: 20px;" style="display: none;"></div>
                 <!-- MẪU 1 -->
-                <div class="form1" id="form1" style="">
+                <div class="form1" id="form1">
                     <div class="f1-l">
                         <div class="div-avt">
                             <img src="images/avt.png" alt="avatar" class="avatar" id="avatar">
@@ -334,6 +358,7 @@
                                 <i class="fas fa-flag-checkered hd-icon"></i>
                                 <span id="mtnn-text"> MỤC TIÊU NGHỀ NGHIỆP</span>
                             </div>
+                            <div id="spacemtnn1"></div>
                         </div>
                          <!-- Tiếng anh -->
                          <div class="div-l" id="mtnn" ondblclick="removeOutCV(this)">
@@ -347,6 +372,7 @@
                                     <div class="myBar" id="htin-bar"></div>
                                 </div>
                             </div>
+                            <div id="spacetinhoc1"></div>
                         </div>
                         <!-- Tiếng anh -->
                         <div class="div-l" id="mtnn" ondblclick="removeOutCV(this)">
@@ -378,6 +404,7 @@
                                     <div class="myBar" id="viet-bar"></div>
                                 </div>
                             </div>
+                            <div id="spacetienganh1"></div>
                         </div>
                         <!-- kỹ năng khác -->
                         <div class="div-l" id="cknk" ondblclick="removeOutCV(this)">
@@ -385,6 +412,7 @@
                                 <i class="fas fa-boxes hd-icon"></i>
                                 <span id="cknk-text"> CÁC KỸ NĂNG KHÁC</span>
                             </div>
+                            <div id="spacekynangkhac1"></div>
                         </div>
                         <!-- Giải thưởng -->
                         <div class="div-l" id="gt" ondblclick="removeOutCV(this)">
@@ -392,7 +420,7 @@
                                 <i class="fas fa-award hd-icon"></i>
                                 <span id="gt-text"> GIẢI THƯỞNG</span>
                             </div>
-
+                            <div id="spacegiaithuong1"></div>
                         </div>
                         <!-- chứng chỉ -->
                         <div class="div-l" id="chungchi" ondblclick="removeOutCV(this)">
@@ -400,6 +428,7 @@
                                 <i class="fas fa-stamp hd-icon"></i>
                                 <span id="chungchi-text"> CHỨNG CHỈ</span>
                             </div>
+                            <div id="spacechungchi1"></div>
                         </div>
                         <!-- sở thích -->
                         <div class="div-l" id="st" ondblclick="removeOutCV(this)">
@@ -407,6 +436,7 @@
                                 <i class="fas fa-thumbs-up hd-icon"></i>
                                 <span id="st-text"> SỞ THÍCH</span>
                             </div>
+                            <div id="spacesothich1"></div>
                         </div>
                         <!-- người tham chiếu -->
                         <div class="div-l" id="nguoithamchieu" ondblclick="removeOutCV(this)">
@@ -423,6 +453,7 @@
                             <div class="div-l-child">
                                 <span id="sdtntc"></span>
                             </div>
+                            <div id="spacenguoithamchieu1"></div>
                         </div>
                     </div>
 
@@ -438,36 +469,45 @@
                             <div class="div-r-header">
                                 <span id="td-text">TRÌNH ĐỘ HỌC VẤN</span>
                             </div>
+                            <div id="spacehocvan1"></div>
                         </div>
                         <!-- kinh nghiêm làm viec -->
                         <div class="div-r" id="kinhnghiemlamviec" ondblclick="removeOutCV(this)">
                             <div class="div-r-header">
                                 <span id="knlv-text">KINH NGHIỆM LÀM VIỆC</span>
                             </div>
+                            <div id="spacekinhnghiem1"></div>
                         </div>
                         <!-- hoạt động -->
                         <div class="div-r" id="hoatdong" ondblclick="removeOutCV(this)">
                             <div class="div-r-header">
                                 <span id="hoatdong-text">HOẠT ĐỘNG</span>
                             </div>
+                            <div id="spacehoatdong1"></div>
                         </div>
                         <!-- dự án -->
                         <div class="div-r" id="duan" ondblclick="removeOutCV(this)">
                             <div class="div-r-header">
                                 <span id="duan-text">DỰ ÁN THAM GIA</span>
                             </div>
+                            <div id="spaceduan1"></div> 
                         </div>
                         <!-- thông tin thêm -->
                         <div class="div-r" id="ttt" ondblclick="removeOutCV(this)">
                             <div class="div-r-header">
                                 <span id="ttt-text">THÔNG TIN THÊM</span>
                             </div>
+                            <div id="spacethongtinthem1"></div>
                         </div>
 
 
                     </div>
                     <div id="footer"></div>
-
+                    <div class="do">
+                        <div class="breakpage">
+                            <i class="far fa-hand-point-left"></i> break page
+                        </div>
+                    </div>
                 </div>
                 <!-- END MẪU 1 -->
 
@@ -521,6 +561,7 @@
                                 <div id="pmtnn">
                                 </div>
                             </div>
+                            <div id="spacemtnn"></div>
 
                             <div class="demuctrai" id="pmkynang" ondblclick="removeOutCV(this)">KỸ NĂNG</div>
                             <div ondblclick="removeOutCV(this)">
@@ -529,7 +570,8 @@
                                     <div class="progress0" id="pcomp-bar"></div>
                                 </div>
                             </div>
-
+                            <div id="spacetinhoc"></div>
+            
                             <div ondblclick="removeOutCV(this)">
                                 <div class="muc1" id="pmtienganh" ondblclick="removeOutCV(this)">Tiếng Anh</div>
 
@@ -561,19 +603,21 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div id="spacetienganh"></div>
 
                             <div ondblclick="removeOutCV(this)">
                                 <div class="demuctrai" id="pmkynangkhac">KỸ NĂNG KHÁC</div>
                                 <div id="pkynangkhac">
                                 </div>
                             </div>
+                            <div id="spacekynangkhac"></div>
 
                             <div ondblclick="removeOutCV(this)">
                                 <div class="demuctrai" id="pmsothich">SỞ THÍCH</div>
                                 <div id="psothich">
                                 </div>
                             </div>
+                            <div id="spacesothich"></div>
                         </div>
                     </div>
 
@@ -583,37 +627,50 @@
                             <div id="phocvan">
                             </div>
                         </div>
+                        <div id="spacehocvan"></div>
 
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmkinhnghiem">KINH NGHIỆM LÀM VIỆC</div>
                             <div id="pkinhnghiem">
                             </div>
                         </div>
+                        <div id="spacekinhnghiem"></div>
+
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmhoatdong">HOẠT ĐỘNG</div>
                             <div id="phoatdong">
                             </div>
                         </div>
+                        <div id="spacehoatdong"></div>
+
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmduan">DỰ ÁN</div>
                             <div id="pduan">
                             </div>
                         </div>
+                        <div id="spaceduan"></div>
+
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmchungchi">CHỨNG CHỈ</div>
                             <div id="pchungchi">
                             </div>
                         </div>
+                        <div id="spacechungchi"></div>
+
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmgiaithuong">GIẢI THƯỞNG</div>
                             <div id="pgiaithuong">
                             </div>
                         </div>
+                        <div id="spacegiaithuong"></div>
+
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmthongtinthem">THÔNG TIN THÊM</div>
                             <div id="pthongtinthem">
                             </div>
                         </div>
+                        <div id="spacethongtinthem"></div>
+
                         <div ondblclick="removeOutCV(this)">
                             <div class="demucphai" id="pmnguoithamchieu">NGƯỜI THAM CHIẾU</div>
                             <table class="content-profile-right">
@@ -638,6 +695,7 @@
                                 </tr>
                             </table>
                         </div>  
+                        <div id="spacenguoithamchieu"></div>
                     </div>
                 </div>
                 </div>
@@ -668,10 +726,12 @@
                             <div class="career-goal head-tit">
                                 <b class="left-tittle" id="gmmuctieunghenghiep">career goal</b>
                                 <div class="career-goal-content" id="gmtnn"></div>
+                                <div id="spacemtnn2"></div>
                             </div>
                             <div class="skill-oit head-tit">
                                 <b class="left-tittle" id="gmtinhoc">IT Skills</b>
                                 <input class="rank" id="gitskill" type="range" min="0" max="10" step="1">
+                                <div id="spacetinhoc2"></div>
                             </div>
                             <div class="skill-eng head-tit">               
                                 <b class="left-tittle" id="gmtienganh">English</b>
@@ -694,7 +754,7 @@
                                      </span>
                                     <input class="rank" id="gwritting" type="range" min="0" max="10" step="1">
                                 </div>
-                                
+                                <div id="spacetienganh2"></div>
                             </div>
                             <div class="orther-skills head-tit skill3">
                                 <div ondblclick="removeOutCV(this)">
@@ -704,6 +764,7 @@
                                     </ul>
                                 
                                 </div>
+                                <div id="spacekynangkhac2"></div>
                             </div>
                             <div class="hobby head-tit">
                                 <div ondblclick="removeOutCV(this)">
@@ -712,6 +773,7 @@
                                     </ul>
 
                                 </div>
+                                <div id="spacesothich2"></div>
                             </div>
                             <div class="more head-tit">
                                 <div ondblclick="removeOutCV(this)">
@@ -719,6 +781,7 @@
                                     <p class="descr" id="gmore"></p>
 
                                 </div>
+                                <div id="spacethongtinthem2"></div>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -735,6 +798,7 @@
                                         
                                     </div>
                                 </div>
+                                <div id="spacehocvan2"></div>
                             </div>
                             <!--Kinh nghiệm làm việc-->
                             <div class="experiences head-tit">
@@ -745,7 +809,7 @@
 
                                     </div>
                                 </div>
-                                
+                                <div id="spacekinhnghiem2"></div>
                             </div>
                             <!--Hoạt động-->
                             <div class="activities head-tit">
@@ -754,7 +818,7 @@
                                     <div id="gact">
                                         
                                     </div>
-                                
+                                    <div id="spacehoatdong2"></div>
                                 </div>
                             </div>
                             <!--Chứng chỉ-->
@@ -766,6 +830,7 @@
                                     </div>
 
                                 </div>
+                                <div id="spacechungchi2"></div>
                             </div>
                             <!--Giải thưởng-->
                             <div class="awards head-tit">
@@ -776,6 +841,7 @@
                                     </div>
 
                                 </div>
+                                <div id="spacegiaithuong2"></div>
                             </div>
                             <!--Dự án-->
                             <div class="projects head-tit">
@@ -786,6 +852,7 @@
                                     </div>
 
                                 </div>
+                                <div id="spaceduan2"></div> 
                             </div>
                             <!--Tham chiếu-->
                             <div class="references head-tit">
@@ -801,14 +868,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div id="spacenguoithamchieu2"></div>
                             </div>
                             <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
                     </div>
                 </div>
-
+              
                 <div class="color-main">
                     <div id="change-color-f1">
                         <div onclick="setColor(this)" class="color" style="background-color: #B82731"></div>
@@ -820,9 +887,12 @@
                     <div class="mess">
                         Nhấn đúp vào một mục không cần thiết để xóa khỏi CV
                     </div>
+                    <div class="mess">
+                        Nhấn Add space để thêm khoảng cách giữa các phần
+                    </div>
                 </div>
-
             </div>
+         
         </div>
     </div>
 
