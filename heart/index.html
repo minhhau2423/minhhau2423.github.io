@@ -64,8 +64,6 @@
         left: 0;
         transform: rotate(45deg);
         transform-origin: 100% 100%;
-        animation-name: example;
-        animation-duration: 4s;
       }
 
       @keyframes animate {
@@ -98,7 +96,7 @@
         /* background-clip: text; */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textclip 2s linear infinite;
+        animation: textclip 1.3s linear infinite;
         display: inline-block;
         font-size: 31px;
       }
@@ -106,6 +104,18 @@
       @keyframes textclip {
         to {
           background-position: 200% center;
+        }
+        0% {
+          transform: scale(0.8);
+        }
+        30% {
+          transform: scale(0.7);
+        }
+        60% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(0.8);
         }
       }
     </style>
